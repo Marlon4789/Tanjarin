@@ -1,0 +1,30 @@
+{% load static %}
+{% block content %}
+
+    <div class="container pt-4 mt-4">
+      <h1 class=" display-5 fs-1 mb-5 text-center">Escoge un Post para ver</h1>
+        <div class="row">
+            {% for post in quill_posts %}
+            <div class="col-md-8 offset-md-2">
+                <div class="card mb-3 border-1 mx-auto" style="max-width: 45rem;">
+                    <div class="row g-0">
+                      <div class="col-md-4 d-flex">
+                        <img src="{{ post.image.url }}" class="img-fluid rounded-start" style="object-fit: cover; width:600rem; height:12rem;" alt="{{ post.title }}">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ post.title }}</h5>
+                          <p class="card-text">{{ post.description }}</p>
+                          <div class="col text-center">
+                            <a href="{% url 'detail' quillpost_id=post.id %}" class="btn btn-dark">Ver post</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

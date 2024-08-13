@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container-fluid mt-5 pt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 d-column mt-5 text-center">
+            <div class="col">
+             <img class="rounded-circle" style="width: 10rem;" src="https://avatars.githubusercontent.com/u/83799877?v=4" alt="">
+            </div>
+ 
+             <div class="col mt-5">
+                 <h1 class="display-6">¡Hey! Soy Marlon Cuartas, <br>Desarrollador back-end.</h1>
+             </div>
+ 
+             <div class="col text-start mt-5">
+                 <p class="col-md-10 offset-md-1">
+                   Desarrollador back-end, especializándome en esta área, en lenguajes como Python, usando Django y actualmente aprendiendo Java, con una formación autodidacta de hace más de tres años en Platzi y programas TI del gobierno e IBM. He tenido experiencia participando en retos de Platzi, como crear un producto mínimo viable, en la temática de startup, y el desarrollo de un prototipo de interfaz de voz. Ver algunos de mis <a class="link-success link-offset-2 link-underline-opacity-100-hover" href="https://platzi.com/p/Marlonn1/">logros y certificados <i class="fa-solid fa-arrow-up-right-from-square link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" alt="icono de link"></i></a>
+                   <br>
+                   <br>
+ 
+                   Soy una persona comprometida con el crecimiento personal y profesional, que no para de aprender y adquirir nuevas habilidades blandas y técnicas. Apasionado por la tecnología y la innovación, con el objetivo de impulsar el desarrollo tecnológico en LATAM. 
+ 
+                 </p>
+             </div>
+    </div>
+    
+</main>
+
+{% include 'content/show_posts.html' %}
+
+{% endblock %}
